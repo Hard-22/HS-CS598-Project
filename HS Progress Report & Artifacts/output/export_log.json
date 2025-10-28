@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2025-10-20T11:42:50.543936",
+    "format": "CSV",
+    "filename": "AI4I_2020_curated.csv",
+    "path": "output/AI4I_2020_curated.csv",
+    "rows": 10000,
+    "columns": 17,
+    "size_mb": 1.55,
+    "checksum_sha256": "9b2cd7ad3932485c5da36be206c5330770da0a36c9d43642f2cc07ed7bbe04c2"
+  },
+  {
+    "timestamp": "2025-10-20T11:42:50.563512",
+    "format": "JSON",
+    "filename": "AI4I_2020_curated.json",
+    "path": "output/AI4I_2020_curated.json",
+    "orient": "records",
+    "rows": 10000,
+    "size_mb": 4.32,
+    "checksum_sha256": "c7d603f92bc5cfa2c5b41ec4bd3a77504b0666f7ff6d32c7ede12363ed2ff6d0"
+  }
+]

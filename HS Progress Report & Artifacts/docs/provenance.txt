@@ -1,0 +1,37 @@
+
+PROVENANCE SUMMARY
+
+Project: AI4I_2020_Curation
+Created: 2025-10-27T21:42:50.591791
+
+DATASET SOURCE
+
+  • title: AI4I 2020 Predictive Maintenance Dataset
+  • source_url: https://archive.ics.uci.edu/dataset/601
+  • doi: 10.24432/C5HS5C
+  • acquisition_date: 2025-09-28
+  • license: CC BY 4.0
+  • original_authors: Stephan Matzka
+
+CURATOR INFORMATION
+
+  • Name: Hard Shah
+  • Institution: University of Illinois Urbana-Champaign
+  • Contact: hardshah@example.edu
+
+CURATION WORKFLOW (3 steps)
+
+  1. data_acquisition - completed
+     Downloaded dataset from UCI ML Repository
+  2. quality_assessment - completed
+     Performed comprehensive EDA and quality checks
+  3. transformation - completed
+     Normalized features using StandardScaler
+
+DATA TRANSFORMATIONS (1)
+
+  • normalization at 2025-10-27T21:42:50.618796
+
+QUALITY CHECKS (2)
+
+  Passed: 2/2
