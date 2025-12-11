@@ -1,0 +1,315 @@
+{
+  "datacite": {
+    "identifier": {
+      "identifier": "10.5281/zenodo.XXXXXXX",
+      "identifierType": "DOI"
+    },
+    "creators": [
+      {
+        "name": "Matzka, Stephan",
+        "nameType": "Personal",
+        "affiliation": "Original Dataset Creator"
+      },
+      {
+        "name": "Shah, Hard",
+        "nameType": "Personal",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "nameIdentifiers": [],
+        "role": "Data Curator"
+      }
+    ],
+    "titles": [
+      {
+        "title": "AI4I 2020 Predictive Maintenance Dataset (Curated)",
+        "titleType": "Main Title"
+      },
+      {
+        "title": "Curated version with enhanced documentation and reproducible workflow",
+        "titleType": "Subtitle"
+      }
+    ],
+    "publisher": "University of Illinois Urbana-Champaign",
+    "publicationYear": "2025",
+    "subjects": [
+      {
+        "subject": "Predictive Maintenance",
+        "subjectScheme": "Library of Congress Subject Headings"
+      },
+      {
+        "subject": "Machine Learning",
+        "subjectScheme": "Library of Congress Subject Headings"
+      },
+      {
+        "subject": "Industrial AI",
+        "subjectScheme": "Custom"
+      },
+      {
+        "subject": "Failure Prediction",
+        "subjectScheme": "Custom"
+      },
+      {
+        "subject": "Synthetic Dataset",
+        "subjectScheme": "Custom"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "CS 598: Foundations of Data Curation",
+        "contributorType": "HostingInstitution",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      }
+    ],
+    "dates": [
+      {
+        "date": "2020",
+        "dateType": "Created",
+        "dateInformation": "Original dataset creation"
+      },
+      {
+        "date": "2025-09-28",
+        "dateType": "Collected",
+        "dateInformation": "Dataset acquired for curation"
+      },
+      {
+        "date": "2025-10-27",
+        "dateType": "Updated",
+        "dateInformation": "Curation workflow completed"
+      }
+    ],
+    "language": "en",
+    "resourceType": {
+      "resourceTypeGeneral": "Dataset",
+      "resourceType": "Tabular Dataset"
+    },
+    "relatedIdentifiers": [
+      {
+        "relatedIdentifier": "10.24432/C5HS5C",
+        "relatedIdentifierType": "DOI",
+        "relationType": "IsDerivedFrom",
+        "resourceTypeGeneral": "Dataset"
+      },
+      {
+        "relatedIdentifier": "https://archive.ics.uci.edu/dataset/601",
+        "relatedIdentifierType": "URL",
+        "relationType": "IsVariantFormOf"
+      }
+    ],
+    "formats": ["text/csv", "application/json", "application/parquet"],
+    "version": "1.0.0",
+    "rightsList": [
+      {
+        "rights": "Creative Commons Attribution 4.0 International",
+        "rightsURI": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsIdentifier": "CC BY 4.0"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "This is a curated version of the AI4I 2020 Predictive Maintenance Dataset, enhanced with comprehensive metadata, quality documentation, and reproducible transformation workflows. The dataset contains 10,000 synthetic records of industrial machine sensor readings designed for predictive maintenance research and education. This curated version includes detailed provenance tracking, data quality assessments, and guidance for handling class imbalance and potential biases inherent in synthetic data.",
+        "descriptionType": "Abstract"
+      },
+      {
+        "description": "The dataset was generated synthetically using physics-based failure models representing five failure modes: Tool Wear Failure (TWF), Heat Dissipation Failure (HDF), Power Failure (PWF), Overstrain Failure (OSF), and Random Failure (RNF). The curation process involved comprehensive quality assessment, feature normalization using StandardScaler, outlier detection and documentation, and creation of structured metadata following DataCite Schema 4.4.",
+        "descriptionType": "Methods"
+      },
+      {
+        "description": "IMPORTANT LIMITATIONS: This is a synthetic dataset that may not fully capture real-world industrial complexity. It exhibits severe class imbalance (96.61% normal vs 3.39% failure) and high multicollinearity between temperature features. The data generation code is not publicly available, limiting full reproducibility of the source data. Users should validate findings on real industrial data before production deployment.",
+        "descriptionType": "TechnicalInfo"
+      }
+    ],
+    "geoLocations": [],
+    "fundingReferences": []
+  },
+  "custom_metadata": {
+    "dataset_characteristics": {
+      "total_records": 10000,
+      "total_features": 14,
+      "numerical_features": 5,
+      "categorical_features": 1,
+      "binary_features": 6,
+      "missing_values": 0,
+      "duplicate_records": 0
+    },
+    "feature_descriptions": {
+      "UDI": {
+        "description": "Unique identifier ranging from 1 to 10000",
+        "type": "integer",
+        "unit": "none",
+        "range": [1, 10000]
+      },
+      "Product ID": {
+        "description": "Product identifier consisting of letter (L/M/H) and serial number",
+        "type": "string",
+        "unit": "none",
+        "example": "L47180"
+      },
+      "Type": {
+        "description": "Product quality variant (L=Low, M=Medium, H=High)",
+        "type": "categorical",
+        "unit": "none",
+        "categories": ["L", "M", "H"],
+        "distribution": {
+          "L": "60%",
+          "M": "30%",
+          "H": "10%"
+        }
+      },
+      "Air temperature [K]": {
+        "description": "Ambient air temperature measured in Kelvin",
+        "type": "float",
+        "unit": "Kelvin",
+        "range": [295.3, 304.5],
+        "mean": 300.0,
+        "std": 2.0
+      },
+      "Process temperature [K]": {
+        "description": "Process temperature generated by adding 10K to air temperature plus random noise",
+        "type": "float",
+        "unit": "Kelvin",
+        "range": [305.7, 313.8],
+        "mean": 310.0,
+        "std": 1.5,
+        "note": "Highly correlated with air temperature (r=0.88)"
+      },
+      "Rotational speed [rpm]": {
+        "description": "Tool rotational speed in revolutions per minute",
+        "type": "integer",
+        "unit": "rpm",
+        "range": [1168, 2886],
+        "mean": 1538,
+        "std": 179
+      },
+      "Torque [Nm]": {
+        "description": "Tool torque measured in Newton-meters",
+        "type": "float",
+        "unit": "Nm",
+        "range": [3.8, 76.6],
+        "mean": 40.0,
+        "std": 9.9
+      },
+      "Tool wear [min]": {
+        "description": "Tool wear duration in minutes (quality variants affect usage)",
+        "type": "integer",
+        "unit": "minutes",
+        "range": [0, 253],
+        "note": "H variant adds 5 minutes, M adds 3 minutes, L adds 2 minutes"
+      },
+      "Machine failure": {
+        "description": "Binary target variable indicating machine failure (0=normal, 1=failure)",
+        "type": "binary",
+        "unit": "none",
+        "class_distribution": {
+          "0": 9661,
+          "1": 339
+        },
+        "imbalance_ratio": "28.5:1",
+        "failure_rate": "3.39%"
+      },
+      "TWF": {
+        "description": "Tool Wear Failure flag (failure occurs if tool wear between 200-240 minutes)",
+        "type": "binary",
+        "unit": "none",
+        "occurrences": 45
+      },
+      "HDF": {
+        "description": "Heat Dissipation Failure flag (failure if temp difference <8.6K and speed <1380rpm)",
+        "type": "binary",
+        "unit": "none",
+        "occurrences": 115
+      },
+      "PWF": {
+        "description": "Power Failure flag (failure if power (torque×speed) <3500W or >9000W)",
+        "type": "binary",
+        "unit": "none",
+        "occurrences": 95
+      },
+      "OSF": {
+        "description": "Overstrain Failure flag (failure if product of tool wear and torque exceeds thresholds)",
+        "type": "binary",
+        "unit": "none",
+        "occurrences": 98
+      },
+      "RNF": {
+        "description": "Random Failure flag (occurs with 0.1% probability)",
+        "type": "binary",
+        "unit": "none",
+        "occurrences": 18
+      }
+    },
+    "data_quality": {
+      "completeness": "5/5 stars - No missing values",
+      "consistency": "5/5 stars - All records valid",
+      "balance": "2/5 stars - Severe class imbalance",
+      "documentation": "4/5 stars - Enhanced through curation"
+    },
+    "known_biases": [
+      {
+        "bias_type": "Class Imbalance",
+        "description": "Failure events constitute only 3.39% of records, which may lead models to optimize for normal operation detection rather than failure prediction",
+        "mitigation": "Users should employ techniques such as SMOTE, class weighting, or ensemble methods designed for imbalanced classification"
+      },
+      {
+        "bias_type": "Synthetic Data",
+        "description": "Dataset does not capture full complexity of real industrial environments including sensor noise, environmental factors, or gradual degradation patterns",
+        "mitigation": "Findings should be validated on real-world data before production deployment"
+      },
+      {
+        "bias_type": "Feature Selection",
+        "description": "The five selected features reflect assumptions about relevant failure predictors that may not generalize across all industrial contexts",
+        "mitigation": "Consider domain knowledge and additional sensors when applying to specific industrial applications"
+      },
+      {
+        "bias_type": "Multicollinearity",
+        "description": "High correlation between air temperature and process temperature (r=0.88) may affect feature importance in some models",
+        "mitigation": "Consider dimensionality reduction or feature selection techniques"
+      }
+    ],
+    "intended_use": {
+      "appropriate_uses": [
+        "Educational purposes and classroom demonstrations",
+        "Benchmarking machine learning algorithms for predictive maintenance",
+        "Research on imbalanced classification techniques",
+        "Development of failure prediction methodologies",
+        "Testing data curation and preprocessing workflows"
+      ],
+      "inappropriate_uses": [
+        "Direct deployment to production industrial systems without validation",
+        "Safety-critical applications without real-world data verification",
+        "Claims about real-world industrial system performance",
+        "Regulatory compliance demonstrations"
+      ]
+    },
+    "curation_workflow": {
+      "curator": "Hard Shah",
+      "institution": "University of Illinois Urbana-Champaign",
+      "course": "CS 598: Foundations of Data Curation",
+      "curation_date": "2025-10-27",
+      "lifecycle_model": "DCC Curation Lifecycle Model",
+      "workflow_steps": [
+        "Data acquisition and provenance documentation",
+        "Ethical and legal assessment",
+        "Comprehensive quality assessment and EDA",
+        "Feature normalization (StandardScaler)",
+        "Outlier detection and documentation",
+        "Metadata creation (DataCite Schema 4.4)",
+        "Provenance logging and workflow automation",
+        "Multi-format export (CSV, JSON, Parquet)",
+        "Repository preparation for long-term preservation"
+      ]
+    },
+    "software_requirements": {
+      "python": ">=3.7",
+      "required_packages": {
+        "pandas": ">=1.3.0",
+        "numpy": ">=1.21.0",
+        "scikit-learn": ">=1.0.0",
+        "matplotlib": ">=3.4.0",
+        "seaborn": ">=0.11.0"
+      }
+    },
+    "citation": {
+      "apa": "Shah, H. (2025). AI4I 2020 Predictive Maintenance Dataset (Curated) [Dataset]. University of Illinois Urbana-Champaign. https://doi.org/10.5281/zenodo.XXXXXXX",
+      "bibtex": "@dataset{shah2025ai4i,\n  author = {Shah, Hard},\n  title = {{AI4I 2020 Predictive Maintenance Dataset (Curated)}},\n  year = {2025},\n  publisher = {University of Illinois Urbana-Champaign},\n  doi = {10.5281/zenodo.XXXXXXX}\n}"
+    }
+  }
+}

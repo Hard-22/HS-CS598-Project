@@ -1,0 +1,196 @@
+{
+  "UDI": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 10000,
+    "mean": 5000.5,
+    "std": 2886.8956799071675,
+    "min": 1.0,
+    "max": 10000.0,
+    "median": 5000.5
+  },
+  "Product ID": {
+    "dtype": "object",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 10000,
+    "top_values": {
+      "M14860": 1,
+      "L53850": 1,
+      "L53843": 1,
+      "L53844": 1,
+      "L53845": 1,
+      "L53846": 1,
+      "H36081": 1,
+      "L53848": 1,
+      "L53849": 1,
+      "L53851": 1
+    }
+  },
+  "Type": {
+    "dtype": "object",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 3,
+    "top_values": {
+      "L": 6000,
+      "M": 2997,
+      "H": 1003
+    }
+  },
+  "Air temperature [K]": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 93,
+    "mean": -9.322320693172515e-16,
+    "std": 1.0000500037503124,
+    "min": -2.352278384956834,
+    "max": 2.2473567087858766,
+    "median": 0.0475312291698062
+  },
+  "Process temperature [K]": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 82,
+    "mean": -1.6939338820520788e-15,
+    "std": 1.0000500037503126,
+    "min": -2.901985570278399,
+    "max": 2.5574861637713,
+    "median": 0.0636533963658965
+  },
+  "Rotational speed [rpm]": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 941,
+    "mean": -2.330580173293129e-16,
+    "std": 1.0000500037503126,
+    "min": -2.068195945136021,
+    "max": 7.514839837762832,
+    "median": -0.1995597476557439
+  },
+  "Torque [Nm]": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 577,
+    "mean": 5.424993787528365e-16,
+    "std": 1.0000500037503126,
+    "min": -3.6301494702505654,
+    "max": 3.672902418795534,
+    "median": 0.011344809589729025
+  },
+  "Tool wear [min]": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 246,
+    "mean": 1.0516032489249483e-16,
+    "std": 1.0000500037503126,
+    "min": -1.6959837443286896,
+    "max": 2.278818594835917,
+    "median": 0.0007698233779410749
+  },
+  "Machine failure": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 2,
+    "mean": 0.0339,
+    "std": 0.18098084265065364,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.0
+  },
+  "TWF": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 2,
+    "mean": 0.0046,
+    "std": 0.06767051004531426,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.0
+  },
+  "HDF": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 2,
+    "mean": 0.0115,
+    "std": 0.10662498247919606,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.0
+  },
+  "PWF": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 2,
+    "mean": 0.0095,
+    "std": 0.09700871645943425,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.0
+  },
+  "OSF": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 2,
+    "mean": 0.0098,
+    "std": 0.09851360562404211,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.0
+  },
+  "RNF": {
+    "dtype": "int64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 2,
+    "mean": 0.0019,
+    "std": 0.043549737748530666,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.0
+  },
+  "Temp_Difference": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 83,
+    "mean": 10.00063,
+    "std": 1.0010938127779023,
+    "min": 7.599999999999966,
+    "max": 12.100000000000023,
+    "median": 9.800000000000011
+  },
+  "Power_Estimate": {
+    "dtype": "float64",
+    "non_null_count": 10000,
+    "null_count": 0,
+    "unique_values": 9118,
+    "mean": 6279.744953253429,
+    "std": 1067.4182951178793,
+    "min": 1148.4406104462846,
+    "max": 10469.923004765633,
+    "median": 6271.027343610193
+  },
+  "Tool_Wear_Category": {
+    "dtype": "category",
+    "non_null_count": 9880,
+    "null_count": 120,
+    "unique_values": 3,
+    "top_values": {
+      "Medium": 4571,
+      "Low": 4547,
+      "High": 762
+    }
+  }
+}

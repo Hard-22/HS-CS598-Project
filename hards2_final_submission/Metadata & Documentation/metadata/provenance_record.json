@@ -1,0 +1,129 @@
+{
+  "project_name": "AI4I_2020_Curation",
+  "creation_timestamp": "2025-12-10T19:27:38.197422",
+  "dataset_source": {
+    "title": "AI4I 2020 Predictive Maintenance Dataset",
+    "source_url": "https://archive.ics.uci.edu/dataset/601",
+    "doi": "10.24432/C5HS5C",
+    "acquisition_date": "2025-09-28",
+    "license": "CC BY 4.0",
+    "original_authors": "Stephan Matzka",
+    "logged_at": "2025-12-10T19:27:38.197443"
+  },
+  "curation_workflow": [
+    {
+      "step_name": "data_acquisition",
+      "description": "Downloaded dataset from UCI ML Repository",
+      "timestamp": "2025-12-10T19:27:38.290325",
+      "status": "completed",
+      "parameters": {
+        "source": "UCI",
+        "date": "2025-09-28"
+      }
+    },
+    {
+      "step_name": "quality_assessment",
+      "description": "Performed comprehensive EDA and quality checks",
+      "timestamp": "2025-12-10T19:27:38.290358",
+      "status": "completed",
+      "parameters": {
+        "missing_values": 0
+      }
+    },
+    {
+      "step_name": "transformation",
+      "description": "Normalized features using StandardScaler",
+      "timestamp": "2025-12-10T19:27:38.290370",
+      "status": "completed",
+      "parameters": {
+        "method": "standard",
+        "features_count": 5
+      }
+    }
+  ],
+  "system_environment": {
+    "captured_at": "2025-12-10T19:27:38.197493",
+    "python_version": "3.12.0 (v3.12.0:0fb18b02c8, Oct  2 2023, 09:45:56) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-14.1.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python_implementation": "CPython",
+    "packages": {
+      "pandas": "2.2.2",
+      "numpy": "1.26.2",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "data_transformations": [
+    {
+      "type": "normalization",
+      "timestamp": "2025-12-10T19:27:38.290390",
+      "details": {
+        "method": "StandardScaler",
+        "features": [
+          "Air temperature [K]",
+          "Process temperature [K]",
+          "Rotational speed [rpm]",
+          "Torque [Nm]",
+          "Tool wear [min]"
+        ]
+      }
+    }
+  ],
+  "quality_checks": [
+    {
+      "check_name": "completeness_check",
+      "timestamp": "2025-12-10T19:27:38.290418",
+      "passed": true,
+      "results": {
+        "missing_values": 0,
+        "total_records": 10000
+      }
+    },
+    {
+      "check_name": "structural_validation",
+      "timestamp": "2025-12-10T19:27:38.290428",
+      "passed": true,
+      "results": {
+        "row_count": {
+          "expected": 10000,
+          "actual": 10000,
+          "status": "PASS"
+        },
+        "columns": {
+          "expected": 14,
+          "actual": 14,
+          "missing": [],
+          "extra": [],
+          "status": "PASS"
+        },
+        "data_types": {
+          "mismatches": [],
+          "status": "PASS"
+        },
+        "missing_values": {
+          "total": 0,
+          "status": "PASS"
+        },
+        "duplicates": {
+          "total": 0,
+          "status": "PASS"
+        }
+      }
+    }
+  ],
+  "exports": [],
+  "curator": {
+    "name": "Hard Shah",
+    "institution": "University of Illinois Urbana-Champaign",
+    "contact": "hardshah@example.edu",
+    "added_at": "2025-12-10T19:27:38.197454"
+  },
+  "notes": [
+    {
+      "timestamp": "2025-12-10T19:27:38.290440",
+      "category": "data_quality",
+      "text": "Dataset exhibits severe class imbalance (3.39% failure rate). Users should apply appropriate techniques for imbalanced classification."
+    }
+  ]
+}

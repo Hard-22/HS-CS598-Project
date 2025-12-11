@@ -1,0 +1,88 @@
+{
+  "dataset_size": 10000,
+  "num_features": 14,
+  "missing_values": 0,
+  "duplicate_records": 0,
+  "class_distribution": {
+    "normal": 9661,
+    "failure": 339,
+    "imbalance_ratio": 28.49852507374631
+  },
+  "outlier_summary": [
+    {
+      "Feature": "Air temperature [K]",
+      "Outlier_Count": 0,
+      "Percentage": "0.00%",
+      "Lower_Bound": "293.50",
+      "Upper_Bound": "306.30"
+    },
+    {
+      "Feature": "Process temperature [K]",
+      "Outlier_Count": 0,
+      "Percentage": "0.00%",
+      "Lower_Bound": "305.35",
+      "Upper_Bound": "314.55"
+    },
+    {
+      "Feature": "Rotational speed [rpm]",
+      "Outlier_Count": 418,
+      "Percentage": "4.18%",
+      "Lower_Bound": "1139.50",
+      "Upper_Bound": "1895.50"
+    },
+    {
+      "Feature": "Torque [Nm]",
+      "Outlier_Count": 69,
+      "Percentage": "0.69%",
+      "Lower_Bound": "12.80",
+      "Upper_Bound": "67.20"
+    },
+    {
+      "Feature": "Tool wear [min]",
+      "Outlier_Count": 0,
+      "Percentage": "0.00%",
+      "Lower_Bound": "-110.50",
+      "Upper_Bound": "325.50"
+    }
+  ],
+  "strong_correlations": [
+    {
+      "Feature_1": "Air temperature [K]",
+      "Feature_2": "Process temperature [K]",
+      "Correlation": "0.876"
+    },
+    {
+      "Feature_1": "Rotational speed [rpm]",
+      "Feature_2": "Torque [Nm]",
+      "Correlation": "-0.875"
+    }
+  ],
+  "scaling_parameters": {
+    "Air temperature [K]": {
+      "mean": 300.00493,
+      "std": 2.0001586674811573
+    },
+    "Process temperature [K]": {
+      "mean": 310.00556,
+      "std": 1.483660030600002
+    },
+    "Rotational speed [rpm]": {
+      "mean": 1538.7761,
+      "std": 179.2751314845146
+    },
+    "Torque [Nm]": {
+      "mean": 39.986909999999995,
+      "std": 9.96843526597329
+    },
+    "Tool wear [min]": {
+      "mean": 107.951,
+      "std": 63.65096384973286
+    }
+  },
+  "quality_rating": {
+    "completeness": 5,
+    "consistency": 5,
+    "balance": 2,
+    "documentation": 4
+  }
+}

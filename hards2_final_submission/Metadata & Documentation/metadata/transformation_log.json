@@ -1,0 +1,59 @@
+[
+  {
+    "timestamp": "2025-12-10T19:27:37.984156",
+    "operation": "outlier_detection",
+    "method": "iqr",
+    "threshold": 1.5,
+    "results": {
+      "Air temperature [K]": 0,
+      "Process temperature [K]": 0,
+      "Rotational speed [rpm]": 418,
+      "Torque [Nm]": 69,
+      "Tool wear [min]": 0
+    }
+  },
+  {
+    "timestamp": "2025-12-10T19:27:37.987180",
+    "operation": "normalization",
+    "method": "standard",
+    "features": [
+      "Air temperature [K]",
+      "Process temperature [K]",
+      "Rotational speed [rpm]",
+      "Torque [Nm]",
+      "Tool wear [min]"
+    ],
+    "parameters": {
+      "Air temperature [K]": {
+        "mean": 300.00493,
+        "std": 2.0001586674811573
+      },
+      "Process temperature [K]": {
+        "mean": 310.00556,
+        "std": 1.483660030600002
+      },
+      "Rotational speed [rpm]": {
+        "mean": 1538.7761,
+        "std": 179.2751314845146
+      },
+      "Torque [Nm]": {
+        "mean": 39.986909999999995,
+        "std": 9.96843526597329
+      },
+      "Tool wear [min]": {
+        "mean": 107.951,
+        "std": 63.65096384973286
+      }
+    }
+  },
+  {
+    "timestamp": "2025-12-10T19:27:37.988561",
+    "operation": "feature_engineering",
+    "derived_features": [
+      "Temp_Difference",
+      "Power_Estimate",
+      "Tool_Wear_Category"
+    ],
+    "description": "Added temperature difference, power estimate, and tool wear category"
+  }
+]
